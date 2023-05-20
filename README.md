@@ -38,6 +38,8 @@ The main steps that were taken to clean the dataset are as follows: <br>
 
 ### Univariate Analysis
 <iframe src="ua_fig1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="ua_fig2.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="ua_fig3.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 
