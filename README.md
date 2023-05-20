@@ -92,23 +92,44 @@ could potentially indicate some sort of negative bias against tagged recipes.
 
 ## Assessment of Missingness
 
-Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
+### NMAR Analysis
 
-```py
-print(counts[['Quarter', 'Count']].head().to_markdown(index=False))
-```
+It is likely that the 'rating' column in the merged (i.e. post-cleaning) dataset is NMAR, since the missingness of a rating for a given recipe is dependent upon 
+whether that recipe received any reviews with ratings. This is consistent with exploration of the interactions dataset, in which various recipe IDs with missing 
+ratings in the primary dataset were found to either have no reviews or only reviews with ratings of zero, which were nonrated reviews. As such, in order to explain
+the missingness of values in the rating column, a new column containing the number of rated reviews for each recipe could be added.
 
-| Quarter     |   Count |
-|:------------|--------:|
-| Fall 2020   |       3 |
-| Winter 2021 |       2 |
-| Spring 2021 |       6 |
-| Summer 2021 |       4 |
-| Fall 2021   |      55 |
+### Missingness Dependency
+
+
 
 ---
 
 ## Hypothesis Testing
 
+### Test Parameters
+
+**Test Statistic (T):** mean of listed, nontagged (LN) recipes - mean of listed, tagged (LT) recipes
+**Significance Level:** 95%
+
+**Null Hypothesis:** T = 0; there is no difference between the average ratings of LN or LT recipes
+**Alternative Hypothesis:** T > 0; the average rating of LN recipes is higher than that of LT recipes
+
+The test statistic and subsequent hypotheses were chosen because the analysis aims to directly compare the directional effect of tagging recipes, which is why the test
+statistic does not incorporate an absolute value. The significance level was chosen because a 95% signficance level is conventionally considered to be the standard burden
+of proof.  
+
+The analysis will be performed via a permutation test, taking a DataFrame of only recipes with listed preparation times of 30 minutes or less and shuffling which of those 
+recipes will be given the '30-minutes-or-less' tag. After 10000 permutations, the p-value will be calculated as the number of times a test statistic was observed to be greater
+than or equal to the observed statistic, divided by the total amount of trials.
+
+### Conclusion
+
+Even after conducting the test several times with varying amounts of permutations, the test consistently produced a p-value of zero, meaning that not one of the many permutations
+resulted in a higher difference in average ratings in comparison to the observed statistic. This would suggest that untagged thirty-minute recipes are significantly more likely 
+to receive higher average ratings relative to their untagged counterparts.  
+
+As such, the answer to the question of 'to tag or not to tag?' appears to be convincingly in favor of the latter; while it is difficult to determine from the data the exact reason 
+why untagged thirty-minute recipes enjoy such a superiority, it would seem that recipe-posters are better off leaving the tags behind.
 
 ---
