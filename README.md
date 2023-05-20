@@ -48,8 +48,10 @@ An excerpt of the relevant collumns of the cleaned dataset can be viewed here:
 
 ### Univariate Analysis
 <iframe src="ua_fig1.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="ua_fig2.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="ua_fig3.html" width=800 height=600 frameBorder=0></iframe>
+The most relevant column to analyze is, of course, that of the ratings of the recipes, since that is the primary metric by which the recipes will be judged.
+A particularly eye-catching feature of this graph is the heavy bias towards higher ratings, which could indicate that users are more likely to leave reviews 
+with ratings when they are especially satisfied with a recipe. Additionally, the spike at a four-star rating is probably due to a general tendency towards
+'round' numbers, as opposed to more granular ratings.
 
 ### Bivariate Analysis
 <iframe src="ba_fig1.html" width=800 height=600 frameBorder=0></iframe>
