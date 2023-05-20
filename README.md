@@ -15,14 +15,19 @@ difference in rating among tagged and untagged recipes with sub-30-minute listed
 
 Number of rows: 83781
 
-Relevant Columns: <br>
-1) tags: the tags associated with each recipe, initially stored as a string <br>
-2) rating: the rating assigned to each recipe, taken as the average rating from the accompanying 'interactions' dataset (float) <br>
-3) minutes: the number of minutes of preparation time listed for each recipe (int) <br>
+Relevant Columns: 
 
-Additional Columns: <br>
-1) thirty_min_tag: indicates whether each recipe has the '30-minutes-or-less' tag (bool) <br>
-2) thirty_min_listed: indicates whether each recipe has a listed preparation time of <= 30 minutes
+1. tags: the tags associated with each recipe, initially stored as a string 
+
+2. rating: the rating assigned to each recipe, taken as the average rating from the accompanying 'interactions' dataset (float)  
+
+3. minutes: the number of minutes of preparation time listed for each recipe (int)  
+
+Additional Columns:  
+
+4. thirty_min_tag: indicates whether each recipe has the '30-minutes-or-less' tag (bool)  
+
+5. thirty_min_listed: indicates whether each recipe has a listed preparation time of <= 30 minutes
 
 ---
 
@@ -31,13 +36,14 @@ Additional Columns: <br>
 The main steps that were taken to clean the dataset are as follows:
 
 1. Merged the recipe dataset with the accompanying interactions dataset in order to add rating information to the recipes dataset.  
+
    > Given that the rating system is on a scale of 1-5, ratings of 0 were not counted, since they likely represent missing ratings.
 
 2. Reformatted the 'tags' column to a list instead of a string in order to more easily access relevant tags.
 
 3. Added additional columns that indicate whether a given recipe is listed with a sub-30-minute preparation time and/or has the '30-minutes-or-less' tag in order to facilitate analysis.
 
-> Although there are other columns that could have been cleaned, such as the nutrition column, they were left alone since they were irrelevant to the analysis.
+   > Although there are other columns that could have been cleaned, such as the nutrition column, they were left alone since they were irrelevant to the analysis.
   
 
 An excerpt of the relevant collumns of the cleaned dataset can be viewed here:  
@@ -59,7 +65,8 @@ with ratings when they are especially satisfied with a recipe. Additionally, the
 
 ### Bivariate Analysis
 <iframe src="ba_fig1.html" width=800 height=600 frameBorder=0></iframe>
-
+Featuring a side-by-side comparison of ratings across the categorical variables of listed and tagged rows, it is immediately apparent that each distribution, 
+including the baseline, contains a large amount of outliers. 
 
 ### Interesting Aggregates
 
