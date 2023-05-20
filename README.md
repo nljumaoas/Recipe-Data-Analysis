@@ -72,7 +72,6 @@ the univariate analysis. Notably, while the distribution of the 'listed' boxplot
 apparent tendency of tagged recipes to have worse performance, which was the driver behind this analysis.
 
 ### Interesting Aggregates
-
 |                |   mean_rating |   count |
 |:---------------|--------------:|--------:|
 | (False, False) |       4.60959 |   46454 |
@@ -130,6 +129,6 @@ to receive higher average ratings relative to their untagged counterparts.
 As such, the answer to the question of 'to tag or not to tag?' appears to be convincingly in favor of the latter; while it is difficult to determine from the data the exact reason 
 why untagged thirty-minute recipes enjoy such a superiority, it would seem that recipe-posters are better off leaving the tags behind.
 
-* by Nicholas Jumaoas*
+ *by Nicholas Jumaoas*
 
 ---
