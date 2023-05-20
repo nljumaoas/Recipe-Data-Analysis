@@ -21,8 +21,8 @@ Relevant Columns: <br>
 3) minutes: the number of minutes of preparation time listed for each recipe (int) <br>
 
 Additional Columns: <br>
-1) thirty-min-tag: indicates whether each recipe has the '30-minutes-or-less' tag (bool) <br>
-2) thirty-min-listed: indicates whether each recipe has a listed preparation time of <= 30 minutes
+1) thirty_min_tag: indicates whether each recipe has the '30-minutes-or-less' tag (bool) <br>
+2) thirty_min_listed: indicates whether each recipe has a listed preparation time of <= 30 minutes
 
 ---
 
