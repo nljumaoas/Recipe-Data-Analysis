@@ -1,7 +1,5 @@
 # To Tag or Not to Tag?
 
-by Nicholas Jumaoas 
-
 ---
 
 ## Introduction
@@ -131,5 +129,7 @@ to receive higher average ratings relative to their untagged counterparts.
 
 As such, the answer to the question of 'to tag or not to tag?' appears to be convincingly in favor of the latter; while it is difficult to determine from the data the exact reason 
 why untagged thirty-minute recipes enjoy such a superiority, it would seem that recipe-posters are better off leaving the tags behind.
+
+* by Nicholas Jumaoas*
 
 ---
