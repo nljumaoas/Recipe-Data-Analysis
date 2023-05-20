@@ -1,14 +1,15 @@
 # My Project Title
 
-by Suraj Rampure (rampure@ucsd.edu)
-
-***Note***: If you choose a repo name and title as uninspired as the ones here, I will be quite sad.
+by Nicholas Jumaoas 
 
 ---
 
 ## Introduction
 
-In this project, we studied the effectiveness of spice challenges in building team morale.
+This will be an analysis of '30-minute' recipes from food.com. While all recipes from the dataset are accompanied
+by a listed preparation time, not all recipes with a listed preparation time of 30 minutes or less are tagged with
+the '30-minutes-or-less' tag. As such, this project will endeavor to determine whether there is a significant
+difference in rating among tagged and untagged recipes with sub-30-minute listed preparation times.
 
 ---
 
