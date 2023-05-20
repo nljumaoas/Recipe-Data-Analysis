@@ -30,11 +30,11 @@ Additional Columns: <br>
 
 The main steps that were taken to clean the dataset are as follows: <br>
 1) Merged the recipe dataset with the accompanying interactions dataset in order to add rating information to the recipes dataset. <br>
- * Given that the rating system is on a scale of 1-5, ratings of 0 were not counted, since they likely represent missing ratings. <br>
+> Given that the rating system is on a scale of 1-5, ratings of 0 were not counted, since they likely represent missing ratings. <br>
 2) Reformatted the 'tags' column to a list instead of a string in order to more easily access relevant tags. <br>
 3) Added additional columns that indicate whether a given recipe is listed with a sub-30-minute preparation time and/or has the '30-minutes-or-less' tag in order to facilitate analysis. <br>
 <br>
-* Although there are other columns that could have been cleaned, such as the nutrition column, they were left alone since they were irrelevant to the analysis.
+> Although there are other columns that could have been cleaned, such as the nutrition column, they were left alone since they were irrelevant to the analysis.
 
 ### Univariate Analysis
 <iframe src="ua_fig1.html" width=800 height=600 frameBorder=0></iframe>
