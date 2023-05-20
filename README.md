@@ -72,6 +72,7 @@ the univariate analysis. Notably, while the distribution of the 'listed' boxplot
 apparent tendency of tagged recipes to have worse performance, which was the driver behind this analysis.
 
 ### Interesting Aggregates
+
 |                |   mean_rating |   count |
 |:---------------|--------------:|--------:|
 | (False, False) |       4.60959 |   46454 |
