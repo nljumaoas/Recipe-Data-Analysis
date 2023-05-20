@@ -57,19 +57,36 @@ An excerpt of the relevant collumns of the cleaned dataset can be viewed here:
 | ['time-to-make', 'course', 'main-ingredient', 'preparation', 'main-dish', 'potatoes', 'vegetables', '4-hours-or-less', 'meatloaf', 'simply-potatoes2']                                                                                                                                             |        5 |        90 | False            | False               |       
 
 ### Univariate Analysis
-<iframe src="ua_fig1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="ua_fig1.html" width=800 height=600 frameBorder=0></iframe>  
+
 The most relevant column to analyze is, of course, that of the ratings of the recipes, since that is the primary metric by which the recipes will be judged.
 A particularly eye-catching feature of this graph is the heavy bias towards higher ratings, which could indicate that users are more likely to leave reviews 
 with ratings when they are especially satisfied with a recipe. Additionally, the spike at a four-star rating is probably due to a general tendency towards
 'round' numbers, as opposed to more granular ratings.
 
 ### Bivariate Analysis
-<iframe src="ba_fig1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="ba_fig1.html" width=800 height=600 frameBorder=0></iframe>  
+
 Featuring a side-by-side comparison of ratings across the categorical variables of listed and tagged rows, it is immediately apparent that each distribution, 
-including the baseline, contains a large amount of outliers. 
+including the baseline, contains a large amount of outliers. This is due to the heavy tendency of users to gravitate towards higher ratings, as alluded to in 
+the univariate analysis. Notably, while the distribution of the 'listed' boxplot is almost identical to that of the larger dataset, the distribution of the 
+'tagged' boxplot is noticeably weighted downwards, with a first quartile approximately .07 points lower than the other two distributions. This reflects the 
+apparent tendency of tagged recipes to have worse performance, which was the driver behind this analysis.
 
 ### Interesting Aggregates
 
+|                |   mean_rating |   count |
+|:---------------|--------------:|--------:|
+| (False, False) |       4.60959 |   46454 |
+| (False, True)  |       4.85747 |      15 |
+| (True, False)  |       4.67161 |   16696 |
+| (True, True)   |       4.62278 |   20616 |
+
+Displayed is a table of nested groups, wherein the first boolean indicates whether a recipe is listed with a <=30min preparation time and the second boolean 
+indicating whether that recipe was also tagged with the '30-minutes-or-less' tag. Most notably, there are very few recipes that tagged as taking 30 minutes or less
+despite having a listed preparation time of more than 30 minutes. Noticeably, however, among recipes that are listed as taking 30 minutes or less to prepare, there
+is a sizeable gap in mean rating between tagged and untagged recipes, with untagged recipes being generally rated higher than their untagged counterparts. This 
+could potentially indicate some sort of negative bias against tagged recipes.
 
 ---
 
