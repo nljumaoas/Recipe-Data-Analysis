@@ -28,13 +28,17 @@ Additional Columns: <br>
 
 ## Cleaning and EDA
 
-The main steps that were taken to clean the dataset are as follows: <br>
-1) Merged the recipe dataset with the accompanying interactions dataset in order to add rating information to the recipes dataset.  
- > Given that the rating system is on a scale of 1-5, ratings of 0 were not counted, since they likely represent missing ratings.  
-2) Reformatted the 'tags' column to a list instead of a string in order to more easily access relevant tags.  
-3) Added additional columns that indicate whether a given recipe is listed with a sub-30-minute preparation time and/or has the '30-minutes-or-less' tag in order to facilitate analysis.  
+The main steps that were taken to clean the dataset are as follows:
 
- > Although there are other columns that could have been cleaned, such as the nutrition column, they were left alone since they were irrelevant to the analysis.  
+1. Merged the recipe dataset with the accompanying interactions dataset in order to add rating information to the recipes dataset.  
+   > Given that the rating system is on a scale of 1-5, ratings of 0 were not counted, since they likely represent missing ratings.
+
+2. Reformatted the 'tags' column to a list instead of a string in order to more easily access relevant tags.
+
+3. Added additional columns that indicate whether a given recipe is listed with a sub-30-minute preparation time and/or has the '30-minutes-or-less' tag in order to facilitate analysis.
+
+> Although there are other columns that could have been cleaned, such as the nutrition column, they were left alone since they were irrelevant to the analysis.
+  
 
 An excerpt of the relevant collumns of the cleaned dataset can be viewed here:  
 
@@ -55,6 +59,7 @@ with ratings when they are especially satisfied with a recipe. Additionally, the
 
 ### Bivariate Analysis
 <iframe src="ba_fig1.html" width=800 height=600 frameBorder=0></iframe>
+
 
 ### Interesting Aggregates
 
