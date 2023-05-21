@@ -99,7 +99,11 @@ the missingness of values in the rating column, a new column containing the numb
 
 ### Missingness Dependency
 
+<iframe src="md_fig1.html" width=800 height=600 frameBorder=0></iframe>
 
+<iframe src="md_fig1.html" width=800 height=600 frameBorder=0></iframe>
+
+The above two graphs compare the distributions of the 'minutes' and 'n_steps' columns when recipes woth missing descriptions are present and absent. After running a permutation test using the difference between column means including and not kncluding the description-less recipes, it appears that the 'n_steps' column can be used to predict recipe missingness (approximate p-value of .01), which would indicate that the 'description' column is MAR.
 
 ---
 
